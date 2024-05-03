@@ -1,0 +1,4 @@
+# ignore all of build
+*
+# except for this file
+!.gitignore
