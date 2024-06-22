@@ -1,14 +1,14 @@
-# CXX=clang
+CXX=clang
 # # Disable stack protection, make the stack executable and add debug info
-# CFLAGS=-fno-stack-protector -g -fsanitize=shadow-call-stack
+CFLAGS=-g -fsanitize=shadow-call-stack
 
 # CXX=gcc
 # # # Disable stack protection, make the stack executable and add debug info
 # CFLAGS=-g -fcf-protection=full
 
-CXX=clang
+# CXX=clang
 # # Disable stack protection, make the stack executable and add debug info
-CFLAGS=-g -fsanitize=shadow-call-stack -O0 -fpass-plugin=../../policies/custom/build/lib/libControlFlowIntegrity.so
+# CFLAGS=-g -fsanitize=shadow-call-stack -O0 -fpass-plugin=../../policies/custom/build/lib/libControlFlowIntegrity.so
 
 # CXX=clang
 # # Disable stack protection, make the stack executable and add debug info
@@ -21,6 +21,10 @@ CFLAGS=-g -fsanitize=shadow-call-stack -O0 -fpass-plugin=../../policies/custom/b
 # CXX=/root/MCFI/toolchain/bin/clang
 # # Disable stack protection, make the stack executable and add debug info
 # CFLAGS=-g
+
+# CXX=/root/MCFI/toolchain/bin/clang
+# # Disable stack protection, make the stack executable and add debug info
+# CFLAGS=-g -Xclang -mdisable-picfi
 
 all: build/clang_attack_gen
 
